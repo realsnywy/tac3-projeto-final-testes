@@ -2,8 +2,6 @@
 
 Este projeto demonstra testes automatizados para a API JSONPlaceholder e cenários web, utilizando Pytest, Unittest, Selenium, Playwright e Robot Framework.
 
----
-
 ## 📦 Estrutura do Projeto
 
 ```
@@ -25,8 +23,6 @@ tac3-projeto-final-testes/
 └── README.md             # Este arquivo
 ```
 
----
-
 ## 🛠️ Ferramentas Utilizadas
 
 - **Linguagem:** Python
@@ -34,8 +30,6 @@ tac3-projeto-final-testes/
 - **Testes Web:** Selenium, Playwright
 - **Testes de Aceitação:** Robot Framework (RequestsLibrary, SeleniumLibrary)
 - **Documentação/Design de API (opcional):** Apidog
-
----
 
 ## ⚙️ Configuração do Ambiente
 
@@ -62,8 +56,6 @@ tac3-projeto-final-testes/
 4. **Configure o Selenium:**
     - Certifique-se de que o `chromedriver` (ou driver do seu navegador) está no `PATH` do sistema.
 
----
-
 ## 🚀 Execução dos Testes
 
 ### Testes com Pytest (`tests/`)
@@ -88,8 +80,6 @@ tac3-projeto-final-testes/
 
 - **Log da execução:** salvo em `test_run.log`.
 
----
-
 ### Testes com Robot Framework (`tests_robot/`)
 
 - **Executar todos os testes:**
@@ -112,22 +102,16 @@ tac3-projeto-final-testes/
 
 - **Relatórios:** `log.html` e `report.html` são gerados no diretório raiz.
 
----
-
 ## 📁 Descrição dos Diretórios
 
 - **`app/`**: Módulos de integração HTTP (`api_client.py`) e automação web (`web_automation.py`).
 - **`tests/`**: Suítes de teste com Pytest/Unittest. `conftest.py` gerencia fixtures e logging.
 - **`tests_robot/`**: Testes Robot Framework (`.robot`) e keywords Python reutilizáveis (`CustomKeywords.py`).
 
----
-
 ## 💡 Ferramentas Opcionais
 
 - **Apidog:** Para design, documentação e execução de testes de API via interface gráfica.
 - **Robot Framework:** Implementado em `tests_robot/` para testes de aceitação automatizados de API e UI.
-
----
 
 ## 📚 Referências
 
@@ -139,4 +123,5 @@ tac3-projeto-final-testes/
 ---
 
 > *Projeto desenvolvido para a disciplina TAC-3 - Tópicos Avançados em Computação III - Testes.*
+>
 > *Última revisão: 17/06/2025*
