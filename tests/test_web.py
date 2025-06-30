@@ -23,7 +23,7 @@ def test_selenium_check_title_jsonplaceholder(selenium_driver):
 def test_selenium_verify_element_jsonplaceholder(selenium_driver):
     """Testa a presença de um elemento (link /guide/) na página JSONPlaceholder com Selenium."""
     assert web_automation.selenium_verify_element_presence(
-        selenium_driver, JSONPLACEHOLDER_URL, By.CSS_SELECTOR, "a[href='/guide/']"
+        selenium_driver, JSONPLACEHOLDER_URL, By.CSS_SELECTOR, "a[href='/guide']"
     )
 
 
@@ -44,7 +44,7 @@ def test_playwright_check_title_and_screenshot_jsonplaceholder(playwright_page):
 def test_playwright_verify_element_jsonplaceholder(playwright_page):
     """Testa a presença de um elemento (link /guide/) na página JSONPlaceholder com Playwright."""
     assert web_automation.playwright_verify_element_presence(
-        playwright_page, JSONPLACEHOLDER_URL, "a[href='/guide/']"
+        playwright_page, JSONPLACEHOLDER_URL, "a[href='/guide']"
     )
 
 
