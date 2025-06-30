@@ -1,0 +1,12 @@
+# Ignora configurações do VSCode
+.vscode/
+
+# Ignora caches do pytest
+.pytest_cache/
+
+# Ignora caches do Python
+__pycache__/
+**/__pycache__/
+
+# Ignora arquivos de cache do Python em qualquer lugar
+*.pyc
