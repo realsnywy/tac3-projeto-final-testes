@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.13.5 on linux)" generated="20250630 09:41:57.593" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests Robot" source="/home/snywy/Documents/GitHub/tac3-projeto-final-testes/tests_robot">
+<suite id="s1-s1" name="Api Tests" source="/home/snywy/Documents/GitHub/tac3-projeto-final-testes/tests_robot/api_tests.robot">
+<kw name="Create Session" library="RequestsLibrary" type="SETUP">
+<arg>jsonplaceholder</arg>
+<arg>${BASE_API_URL}</arg>
+<arg>verify=True</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20250630 09:41:57.698" level="INFO">Creating Session using : alias=jsonplaceholder, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20250630 09:41:57.698" endtime="20250630 09:41:57.698"/>
+</kw>
+<test id="s1-s1-t1" name="Buscar Todos os Posts e Validar Resposta" line="12">
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>jsonplaceholder</arg>
+<arg>/posts</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20250630 09:41:58.068" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/posts 
+ path_url=/posts 
+ headers={'User-Agent': 'python-requests/2.32.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20250630 09:41:58.068" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/posts 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 30 Jun 2025 12:41:58 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Content-Encoding': 'gzip', 'Etag': 'W/"6b80-Ybsq/K6GwwqrYkAsFxqDXGC7DoM"', 'Expires': '-1', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Pragma': 'no-cache', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=fYEg0yYn%2FHG5xmZCOfDw7Wa8EaBKUKejE1BnMnqmxYE%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1750746720"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=fYEg0yYn%2FHG5xmZCOfDw7Wa8EaBKUKejE1BnMnqmxYE%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1750746720"', 'Server': 'cloudflare', 'Vary': 'Origin, Accept-Encoding', 'Via': '2.0 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1750746767', 'Age': '22138', 'Cf-Cache-Status': 'HIT', 'CF-RAY': '957dbda97c0eae69-GRU', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+  },
+  {
+    "userId": 1,
+    "id": 3,
+    "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+    "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+  },
+  {
+    "userId": 1,
+    "id": 4,
+    "title": "eum et est occaecati",
+    "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+  },
+  {
+    "userId": 1,
+    "id": 5,
+    "title": "nesciunt quas odio",
+    "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
+  },
+  {
+    "userId": 1,
+    "id": 6,
+    "title": "dolorem eum magni eos aperiam quia",
+    "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
+  },
+  {
+    "userId": 1,
+    "id": 7,
+    "title": "magnam facilis autem",
+    "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas"
+  },
+  {
+    "userId": 1,
+    "id": 8,
+    "title": "dolorem dolore est ipsam",
+    "body": "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae"
+  },
+  {
+    "userId": 1,
+    "id": 9,
+    "title": "nesciunt iure omnis dolorem tempora et accusantium",
+    "body": "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas"
+  },
+  {
+    "userId": 1,
+    "id": 10,
+    "title": "optio molestias id quia eum",
+    "body": "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error"
+  },
+  {
+    "userId": 2,
+    "id": 11,
+    "title": "et ea vero quia laudantium autem",
+    "body": "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi"
+  },
+  {
+    "userId": 2,
+    "id": 12,
+    "title": "in quibusdam tempore odit est dolorem",
+    "body": "itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio"
+  },
+  {
+    "userId": 2,
+    "id": 13,
+    "title": "dolorum ut in voluptas mollitia et saepe quo animi",
+    "body": "aut dicta possimus sint mollitia voluptas commodi quo doloremque\niste corrupti reiciendis voluptatem eius rerum\nsit cumque quod eligendi laborum minima\nperferendis recusandae assumenda consectetur porro architecto ipsum ipsam"
+  },
+  {
+    "userId": 2,
+    "id": 14,
+    "title": "voluptatem eligendi optio",
+    "body": "fuga et accusamus dolorum perferendis illo voluptas\nnon doloremque neque facere\nad qui dolorum molestiae beatae\nsed aut voluptas totam sit illum"
+  },
+  {
+    "userId": 2,
+    "id": 15,
+    "title": "eveniet quod temporibus",
+    "body": "reprehenderit quos placeat\nvelit minima officia dolores impedit repudiandae molestiae nam\nvoluptas recusandae quis delectus\nofficiis harum fugiat vitae"
+  },
+  {
+    "userId": 2,
+    "id": 16,
+    "title": "sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio",
+    "body": "suscipit nam nisi quo aperiam aut\nasperiores eos fugit maiores voluptatibus quia\nvoluptatem quis ullam qui in alias quia est\nconsequatur magni mollitia accusamus ea nisi voluptate dicta"
+  },
+  {
+    "userId": 2,
+    "id": 17,
+    "title": "fugit voluptas sed molestias voluptatem provident",
+    "body": "eos voluptas et aut odit natus earum\naspernatur fuga molestiae ullam\ndeserunt ratione qui eos\nqui nihil ratione nemo velit ut aut id quo"
+  },
+  {
+    "userId": 2,
+    "id": 18,
+    "title": "voluptate et itaque vero tempora molestiae",
+    "body": "eveniet quo quis\nlaborum totam consequatur non dolor\nut et est repudiandae\nest voluptatem vel debitis et magnam"
+  },
+  {
+    "userId": 2,
+    "id": 19,
+    "title": "adipisci placeat illum aut reiciendis qui",
+    "body": "illum quis cupiditate provident sit magnam\nea sed aut omnis\nveniam maiores ullam consequatur atque\nadipisci quo iste expedita sit quos voluptas"
+  },
+  {
+    "userId": 2,
+    "id": 20,
+    "title": "doloribus ad provident suscipit at",
+    "body": "qui consequuntur ducimus possimus quisquam amet similique\nsuscipit porro ipsam amet\neos veritatis officiis exercitationem vel fugit aut necessitatibus totam\nomnis rerum consequatur expedita quidem cumque explicabo"
+  },
+  {
+    "userId": 3,
+    "id": 21,
+    "title": "asperiores ea ipsam voluptatibus modi minima quia sint",
+    "body": "repellat aliquid praesentium dolorem quo\nsed totam minus non itaque\nnihil labore molestiae sunt dolor eveniet hic recusandae veniam\ntempora et tenetur expedita sunt"
+  },
+  {
+    "userId": 3,
+    "id": 22,
+    "title": "dolor sint quo a velit explicabo quia nam",
+    "body": "eos qui et ipsum ipsam suscipit aut\nsed omnis non odio\nexpedita earum mollitia molestiae aut atque rem suscipit\nnam impedit esse"
+  },
+  {
+    "userId": 3,
+    "id": 23,
+    "title": "maxime id vitae nihil numquam",
+    "body": "veritatis unde neque eligendi\nquae quod architecto quo neque vitae\nest illo sit tempora doloremque fugit quod\net et vel beatae sequi ullam sed tenetur perspiciatis"
+  },
+  {
+    "userId": 3,
+    "id": 24,
+    "title": "autem hic labore sunt dolores incidunt",
+    "body": "enim et ex nulla\nomnis voluptas quia qui\nvoluptatem consequatur numquam aliquam sunt\ntotam recusandae id dignissimos aut sed asperiores deserunt"
+  },
+  {
+    "userId": 3,
+    "id": 25,
+    "title": "rem alias distinctio quo quis",
+    "body": "ullam consequatur ut\nomnis quis sit vel consequuntur\nipsa eligendi ipsum molestiae et omnis error nostrum\nmolestiae illo tempore quia et distinctio"
+  },
+  {
+    "userId": 3,
+    "id": 26,
+    "title": "est et quae odit qui non",
+    "body": "similique esse doloribus nihil accusamus\nomnis dolorem fuga consequuntur reprehenderit fugit recusandae temporibus\nperspiciatis cum ut laudantium\nomnis aut molestiae vel vero"
+  },
+  {
+    "userId": 3,
+    "id": 27,
+    "title": "quasi id et eos tenetur aut quo autem",
+    "body": "eum sed dolores ipsam sint possimus debitis occaecati\ndebitis qui qui et\nut placeat enim earum aut odit facilis\nconsequatur suscipit necessitatibus rerum sed inventore temporibus consequatur"
+  },
+  {
+    "userId": 3,
+    "id": 28,
+    "title": "delectus ullam et corporis nulla voluptas sequi",
+    "body": "non et quaerat ex quae ad maiores\nmaiores recusandae totam aut blanditiis mollitia quas illo\nut voluptatibus voluptatem\nsimilique nostrum eum"
+  },
+  {
+    "userId": 3,
+    "id": 29,
+    "title": "iusto eius quod necessitatibus culpa ea",
+    "body": "odit magnam ut saepe sed non qui\ntempora atque nihil\naccusamus illum doloribus illo dolor\neligendi repudiandae odit magni similique sed cum maiores"
+  },
+  {
+    "userId": 3,
+    "id": 30,
+    "title": "a quo magni similique perferendis",
+    "body": "alias dolor cumque\nimpedit blanditiis non eveniet odio maxime\nblanditiis amet eius quis tempora quia autem rem\na provident perspiciatis quia"
+  },
+  {
+    "userId": 4,
+    "id": 31,
+    "title": "ullam ut quidem id aut vel consequuntur",
+    "body": "debitis eius sed quibusdam non quis consectetur vitae\nimpedit ut qui consequatur sed aut in\nquidem sit nostrum et maiores adipisci atque\nquaerat voluptatem adipisci repudiandae"
+  },
+  {
+    "userId": 4,
+    "id": 32,
+    "title": "doloremque illum aliquid sunt",
+    "body": "deserunt eos nobis asperiores et hic\nest debitis repellat molestiae optio\nnihil ratione ut eos beatae quibusdam distinctio maiores\nearum voluptates et aut adipisci ea maiores voluptas maxime"
+  },
+  {
+    "userId": 4,
+    "id": 33,
+    "title": "qui explicabo molestiae dolorem",
+    "body": "rerum ut et numquam laborum odit est sit\nid qui sint in\nquasi tenetur tempore aperiam et quaerat qui in\nrerum officiis sequi cumque quod"
+  },
+  {
+    "userId": 4,
+    "id": 34,
+    "title": "magnam ut rerum iure",
+    "body": "ea velit perferendis earum ut voluptatem voluptate itaque iusto\ntotam pariatur in\nnemo voluptatem voluptatem autem magni tempora minima in\nest distinctio qui assumenda accusamus dignissimos officia nesciunt nobis"
+  },
+  {
+    "userId": 4,
+    "id": 35,
+    "title": "id nihil consequatur molestias animi provident",
+    "body": "nisi error delectus possimus ut eligendi vitae\nplaceat eos harum cupiditate facilis reprehenderit voluptatem beatae\nmodi ducimus quo illum voluptas eligendi\net nobis quia fugit"
+  },
+  {
+    "userId": 4,
+    "id": 36,
+    "title": "fuga nam accusamus voluptas reiciendis itaque",
+    "body": "ad mollitia et omnis minus architecto odit\nvoluptas doloremque maxime aut non ipsa qui alias veniam\nblanditiis culpa aut quia nihil cumque facere et occaecati\nqui aspernatur quia eaque ut aperiam inventore"
+  },
+  {
+    "userId": 4,
+    "id": 37,
+    "title": "provident vel ut sit ratione est... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg timestamp="20250630 09:41:58.068" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20250630 09:41:57.699" endtime="20250630 09:41:58.069"/>
+</kw>
+<kw name="Verificar Status da Resposta da API" library="CustomKeywords">
+<arg>${response}</arg>
+<arg>200</arg>
+<doc>Verifica se o status code da resposta da API é o esperado.</doc>
+<msg timestamp="20250630 09:41:58.069" level="INFO">Verificando status. Esperado: 200, Recebido: 200</msg>
+<msg timestamp="20250630 09:41:58.069" level="INFO">Status da API verificado com sucesso.</msg>
+<status status="PASS" starttime="20250630 09:41:58.069" endtime="20250630 09:41:58.069"/>
+</kw>
+<kw name="Resposta da API Deve Conter Lista Não Vazia" library="CustomKeywords">
+<arg>${response}</arg>
+<doc>Verifica se a resposta da API (JSON) é uma lista e não está vazia.</doc>
+<msg timestamp="20250630 09:41:58.070" level="INFO">Verificando se a resposta da API é uma lista não vazia.</msg>
+<msg timestamp="20250630 09:41:58.070" level="INFO">Resposta é uma lista com 100 itens.</msg>
+<status status="PASS" starttime="20250630 09:41:58.070" endtime="20250630 09:41:58.070"/>
+</kw>
+<doc>Testa GET /posts, valida status 200 e conteúdo.</doc>
+<tag>api</tag>
+<tag>robot</tag>
+<status status="PASS" starttime="20250630 09:41:57.698" endtime="20250630 09:41:58.070"/>
+</test>
+<test id="s1-s1-t2" name="Criar Novo Post e Validar Resposta" line="19">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{payload}</var>
+<arg>title=Post Robot</arg>
+<arg>body=Conteúdo via Robot</arg>
+<arg>userId=101</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20250630 09:41:58.072" level="INFO">&amp;{payload} = { title=Post Robot | body=Conteúdo via Robot | userId=101 }</msg>
+<status status="PASS" starttime="20250630 09:41:58.071" endtime="20250630 09:41:58.072"/>
+</kw>
+<kw name="POST On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>jsonplaceholder</arg>
+<arg>/posts</arg>
+<arg>json=${payload}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<msg timestamp="20250630 09:41:58.579" level="INFO">POST Request : url=https://jsonplaceholder.typicode.com/posts 
+ path_url=/posts 
+ headers={'User-Agent': 'python-requests/2.32.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '75', 'Content-Type': 'application/json'} 
+ body=b'{"title": "Post Robot", "body": "Conte\\u00fado via Robot", "userId": "101"}' 
+ </msg>
+<msg timestamp="20250630 09:41:58.579" level="INFO">POST Response : url=https://jsonplaceholder.typicode.com/posts 
+ status=201, reason=Created 
+ headers={'Date': 'Mon, 30 Jun 2025 12:41:58 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '92', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Expose-Headers': 'Location', 'Cache-Control': 'no-cache', 'Etag': 'W/"5c-iLNEfGX3w57hhSbP68z2F2IConM"', 'Expires': '-1', 'Location': 'https://jsonplaceholder.typicode.com/posts/101', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Pragma': 'no-cache', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=FCj%2FAxVkUew7N5U2TwwO2w0dCIU9rJFCZo9nUJtC2y4%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1751287318"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=FCj%2FAxVkUew7N5U2TwwO2w0dCIU9rJFCZo9nUJtC2y4%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1751287318"', 'Server': 'cloudflare', 'Vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'Via': '2.0 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '994', 'X-Ratelimit-Reset': '1751287339', 'Cf-Cache-Status': 'DYNAMIC', 'CF-RAY': '957dbdaa1caeae69-GRU', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={
+  "title": "Post Robot",
+  "body": "Conteúdo via Robot",
+  "userId": "101",
+  "id": 101
+} 
+ </msg>
+<msg timestamp="20250630 09:41:58.579" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20250630 09:41:58.072" endtime="20250630 09:41:58.579"/>
+</kw>
+<kw name="Verificar Status da Resposta da API" library="CustomKeywords">
+<arg>${response}</arg>
+<arg>201</arg>
+<doc>Verifica se o status code da resposta da API é o esperado.</doc>
+<msg timestamp="20250630 09:41:58.580" level="INFO">Verificando status. Esperado: 201, Recebido: 201</msg>
+<msg timestamp="20250630 09:41:58.580" level="INFO">Status da API verificado com sucesso.</msg>
+<status status="PASS" starttime="20250630 09:41:58.580" endtime="20250630 09:41:58.580"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${json_response}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250630 09:41:58.581" level="INFO">${json_response} = {'title': 'Post Robot', 'body': 'Conteúdo via Robot', 'userId': '101', 'id': 101}</msg>
+<status status="PASS" starttime="20250630 09:41:58.580" endtime="20250630 09:41:58.581"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${json_response}[title]</arg>
+<arg>${payload}[title]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20250630 09:41:58.581" endtime="20250630 09:41:58.582"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${json_response}[body]</arg>
+<arg>${payload}[body]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20250630 09:41:58.582" endtime="20250630 09:41:58.582"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${json_response}[userId]</arg>
+<arg>${payload}[userId]</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" starttime="20250630 09:41:58.582" endtime="20250630 09:41:58.583"/>
+</kw>
+<kw name="Dictionary Should Contain Key" library="Collections">
+<arg>${json_response}</arg>
+<arg>id</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20250630 09:41:58.583" endtime="20250630 09:41:58.583"/>
+</kw>
+<doc>Testa POST /posts, valida status 201 e dados criados.</doc>
+<tag>api</tag>
+<tag>robot</tag>
+<status status="PASS" starttime="20250630 09:41:58.071" endtime="20250630 09:41:58.583"/>
+</test>
+<test id="s1-s1-t3" name="Buscar Post Inexistente e Validar 404" line="31">
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>jsonplaceholder</arg>
+<arg>/posts/99999</arg>
+<arg>expected_status=404</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20250630 09:41:58.681" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/posts/99999 
+ path_url=/posts/99999 
+ headers={'User-Agent': 'python-requests/2.32.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20250630 09:41:58.681" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/posts/99999 
+ status=404, reason=Not Found 
+ headers={'Date': 'Mon, 30 Jun 2025 12:41:58 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Expires': '-1', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Pragma': 'no-cache', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=byXuafEYhsuiN2JplZoUTXG4ng2vtfm1ROwOtc5%2B50M%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1751285791"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=byXuafEYhsuiN2JplZoUTXG4ng2vtfm1ROwOtc5%2B50M%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1751285791"', 'Server': 'cloudflare', 'Vary': 'Origin, Accept-Encoding', 'Via': '2.0 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '996', 'X-Ratelimit-Reset': '1751285839', 'Age': '1526', 'Cf-Cache-Status': 'HIT', 'Content-Encoding': 'gzip', 'CF-RAY': '957dbdad5ff5ae69-GRU', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={} 
+ </msg>
+<msg timestamp="20250630 09:41:58.682" level="INFO">${response} = &lt;Response [404]&gt;</msg>
+<status status="PASS" starttime="20250630 09:41:58.584" endtime="20250630 09:41:58.682"/>
+</kw>
+<kw name="Verificar Status da Resposta da API" library="CustomKeywords">
+<arg>${response}</arg>
+<arg>404</arg>
+<doc>Verifica se o status code da resposta da API é o esperado.</doc>
+<msg timestamp="20250630 09:41:58.683" level="INFO">Verificando status. Esperado: 404, Recebido: 404</msg>
+<msg timestamp="20250630 09:41:58.683" level="INFO">Status da API verificado com sucesso.</msg>
+<status status="PASS" starttime="20250630 09:41:58.682" endtime="20250630 09:41:58.683"/>
+</kw>
+<doc>Testa GET /posts/{id} para um ID inexistente, valida status 404.</doc>
+<tag>api</tag>
+<tag>negativo</tag>
+<tag>robot</tag>
+<status status="PASS" starttime="20250630 09:41:58.584" endtime="20250630 09:41:58.683"/>
+</test>
+<status status="PASS" starttime="20250630 09:41:57.613" endtime="20250630 09:41:58.684"/>
+</suite>
+<suite id="s1-s2" name="Ui Tests" source="/home/snywy/Documents/GitHub/tac3-projeto-final-testes/tests_robot/ui_tests.robot">
+<kw name="Abrir Navegador Para Testes JSONPlaceholder" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${JSONPLACEHOLDER_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20250630 09:41:58.766" level="INFO">Opening browser 'Chrome' to base url 'https://jsonplaceholder.typicode.com/'.</msg>
+<status status="PASS" starttime="20250630 09:41:58.765" endtime="20250630 09:42:01.863"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20250630 09:42:01.863" endtime="20250630 09:42:01.890"/>
+</kw>
+<status status="PASS" starttime="20250630 09:41:58.765" endtime="20250630 09:42:01.890"/>
+</kw>
+<test id="s1-s2-t1" name="Verificar Título da Página JSONPlaceholder com Selenium" line="18">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${JSONPLACEHOLDER_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20250630 09:42:01.890" level="INFO">Opening url 'https://jsonplaceholder.typicode.com/'</msg>
+<status status="PASS" starttime="20250630 09:42:01.890" endtime="20250630 09:42:02.228"/>
+</kw>
+<kw name="Get WebDriver Instance" library="CustomKeywords">
+<var>${driver}</var>
+<doc>Obtém a instância atual do WebDriver do SeleniumLibrary.</doc>
+<msg timestamp="20250630 09:42:02.229" level="INFO">${driver} = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="d5b249717cf642ef835ff8f3981f0aa2")&gt;</msg>
+<status status="PASS" starttime="20250630 09:42:02.229" endtime="20250630 09:42:02.229"/>
+</kw>
+<kw name="Título da Página Deve Conter" library="CustomKeywords">
+<arg>${driver}</arg>
+<arg>JSONPlaceholder</arg>
+<doc>Verifica se o título da página atual contém a substring esperada.</doc>
+<msg timestamp="20250630 09:42:02.229" level="INFO">Verificando se o título da página contém 'JSONPlaceholder'.</msg>
+<msg timestamp="20250630 09:42:02.236" level="INFO">Título da página 'JSONPlaceholder - Free Fake REST API' verificado com sucesso.</msg>
+<status status="PASS" starttime="20250630 09:42:02.229" endtime="20250630 09:42:02.236"/>
+</kw>
+<doc>Abre a página JSONPlaceholder e verifica o título.</doc>
+<tag>robot</tag>
+<tag>selenium</tag>
+<tag>ui</tag>
+<status status="PASS" starttime="20250630 09:42:01.890" endtime="20250630 09:42:02.236"/>
+</test>
+<test id="s1-s2-t2" name="Preencher Formulário Simples e Validar com Selenium" line="25">
+<kw name="Set Variable" library="BuiltIn">
+<var>${message}</var>
+<arg>Olá Robot Framework!</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20250630 09:42:02.237" level="INFO">${message} = Olá Robot Framework!</msg>
+<status status="PASS" starttime="20250630 09:42:02.237" endtime="20250630 09:42:02.237"/>
+</kw>
+<kw name="Get WebDriver Instance" library="CustomKeywords">
+<var>${driver}</var>
+<doc>Obtém a instância atual do WebDriver do SeleniumLibrary.</doc>
+<msg timestamp="20250630 09:42:02.237" level="INFO">${driver} = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="d5b249717cf642ef835ff8f3981f0aa2")&gt;</msg>
+<status status="PASS" starttime="20250630 09:42:02.237" endtime="20250630 09:42:02.237"/>
+</kw>
+<kw name="Preencher Formulário Simples e Validar Mensagem" library="CustomKeywords">
+<arg>${driver}</arg>
+<arg>${message}</arg>
+<doc>Navega para a página de teste, preenche a mensagem e valida a saída.</doc>
+<msg timestamp="20250630 09:42:02.237" level="INFO">Acessando https://www.lambdatest.com/selenium-playground/simple-form-demo para teste de formulário.</msg>
+<msg timestamp="20250630 09:42:03.232" level="INFO">Mensagem 'Olá Robot Framework!' inserida no campo.</msg>
+<msg timestamp="20250630 09:42:03.303" level="INFO">Botão 'Get Checked Value' clicado.</msg>
+<msg timestamp="20250630 09:42:03.332" level="INFO">Mensagem de saída encontrada: 'Olá Robot Framework!'</msg>
+<msg timestamp="20250630 09:42:03.332" level="INFO">Formulário preenchido e validado com sucesso.</msg>
+<status status="PASS" starttime="20250630 09:42:02.237" endtime="20250630 09:42:03.332"/>
+</kw>
+<doc>Abre a página de teste de formulário, preenche e valida.</doc>
+<tag>formulario</tag>
+<tag>robot</tag>
+<tag>selenium</tag>
+<tag>ui</tag>
+<status status="PASS" starttime="20250630 09:42:02.236" endtime="20250630 09:42:03.332"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20250630 09:42:03.332" endtime="20250630 09:42:03.401"/>
+</kw>
+<status status="PASS" starttime="20250630 09:41:58.685" endtime="20250630 09:42:03.401"/>
+</suite>
+<status status="PASS" starttime="20250630 09:41:57.594" endtime="20250630 09:42:03.403"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">api</stat>
+<stat pass="1" fail="0" skip="0">formulario</stat>
+<stat pass="1" fail="0" skip="0">negativo</stat>
+<stat pass="5" fail="0" skip="0">robot</stat>
+<stat pass="2" fail="0" skip="0">selenium</stat>
+<stat pass="2" fail="0" skip="0">ui</stat>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Tests Robot">Tests Robot</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Api Tests">Tests Robot.Api Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s2" name="Ui Tests">Tests Robot.Ui Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

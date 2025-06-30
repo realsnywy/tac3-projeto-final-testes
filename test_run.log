@@ -1,0 +1,58 @@
+2025-06-30 09:41:25,340 - root - INFO - Logging configurado para a sessão de testes.
+2025-06-30 09:41:25,341 - app.api_client - INFO - Realizando GET em https://jsonplaceholder.typicode.com/posts
+2025-06-30 09:41:25,708 - app.api_client - INFO - GET /posts - Status: 200, Resposta (primeiros 100 chars): [
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excep
+2025-06-30 09:41:25,709 - app.api_client - INFO - Realizando POST em https://jsonplaceholder.typicode.com/posts com payload: {'title': 'Meu Novo Post Pytest', 'body': 'Conteúdo do post.', 'userId': 1}
+2025-06-30 09:41:26,333 - app.api_client - INFO - POST /posts - Status: 201, Resposta: {'title': 'Meu Novo Post Pytest', 'body': 'Conteúdo do post.', 'userId': 1, 'id': 101}
+2025-06-30 09:41:26,334 - app.api_client - INFO - Realizando DELETE em https://jsonplaceholder.typicode.com/posts/1
+2025-06-30 09:41:27,039 - app.api_client - INFO - DELETE /posts/1 - Status: 200
+2025-06-30 09:41:27,040 - app.api_client - INFO - Realizando GET em https://jsonplaceholder.typicode.com/posts
+2025-06-30 09:41:27,346 - app.api_client - INFO - GET /posts - Status: 200, Resposta (primeiros 100 chars): [
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excep
+2025-06-30 09:41:27,347 - app.api_client - INFO - Realizando GET em https://jsonplaceholder.typicode.com/posts/1
+2025-06-30 09:41:27,653 - app.api_client - INFO - GET /posts/1 - Status: 200
+2025-06-30 09:41:27,654 - app.api_client - INFO - Realizando GET em https://jsonplaceholder.typicode.com/posts/5
+2025-06-30 09:41:28,370 - app.api_client - INFO - GET /posts/5 - Status: 200
+2025-06-30 09:41:28,372 - app.api_client - INFO - Realizando GET em https://jsonplaceholder.typicode.com/posts/10
+2025-06-30 09:41:28,677 - app.api_client - INFO - GET /posts/10 - Status: 200
+2025-06-30 09:41:28,679 - app.api_client - INFO - Realizando GET em https://jsonplaceholder.typicode.com/posts/99999
+2025-06-30 09:41:28,984 - app.api_client - INFO - GET /posts/99999 - Status: 404
+2025-06-30 09:41:28,985 - app.api_client - INFO - Realizando POST em https://jsonplaceholder.typicode.com/posts com payload: {'title': 'Post com UserID String', 'body': 'Teste de tipo de dado.', 'userId': 'abc'}
+2025-06-30 09:41:29,702 - app.api_client - INFO - POST /posts - Status: 201, Resposta: {'title': 'Post com UserID String', 'body': 'Teste de tipo de dado.', 'userId': 'abc', 'id': 101}
+2025-06-30 09:41:29,704 - app.api_client - INFO - Realizando GET em https://jsonplaceholder.typicode.com/posts/1
+2025-06-30 09:41:30,008 - app.api_client - INFO - GET /posts/1 - Status: 200
+2025-06-30 09:41:30,009 - app.api_client - INFO - Realizando PUT em https://jsonplaceholder.typicode.com/posts/1 com payload: {'id': 1, 'title': 'Título Atualizado Unittest', 'body': 'Corpo atualizado via unittest.', 'userId': 1}
+2025-06-30 09:41:30,725 - app.api_client - INFO - PUT /posts/1 - Status: 200, Resposta: {'id': 1, 'title': 'Título Atualizado Unittest', 'body': 'Corpo atualizado via unittest.', 'userId': 1}
+2025-06-30 09:41:30,727 - root - INFO - Inicializando WebDriver do Selenium (Chrome)
+2025-06-30 09:41:31,465 - app.web_automation - INFO - Selenium: Acessando https://jsonplaceholder.typicode.com/ para verificar se o título contém 'JSONPlaceholder'
+2025-06-30 09:41:34,058 - app.web_automation - INFO - Selenium: Título encontrado 'JSONPlaceholder - Free Fake REST API'
+2025-06-30 09:41:34,059 - root - INFO - Fechando WebDriver do Selenium
+2025-06-30 09:41:34,131 - root - INFO - Inicializando WebDriver do Selenium (Chrome)
+2025-06-30 09:41:34,764 - app.web_automation - INFO - Selenium: Acessando https://jsonplaceholder.typicode.com/ para verificar presença do elemento css selector='a[href='/guide']'
+2025-06-30 09:41:37,043 - app.web_automation - INFO - Selenium: Elemento css selector='a[href='/guide']' encontrado.
+2025-06-30 09:41:37,044 - root - INFO - Fechando WebDriver do Selenium
+2025-06-30 09:41:37,104 - root - INFO - Inicializando Playwright e abrindo nova página (Chromium)
+2025-06-30 09:41:38,176 - app.web_automation - INFO - Playwright: Acessando https://jsonplaceholder.typicode.com/ para verificar se o título contém 'JSONPlaceholder' e tirar screenshot em jsonplaceholder_playwright.png
+2025-06-30 09:41:39,314 - app.web_automation - INFO - Playwright: Título encontrado 'JSONPlaceholder - Free Fake REST API', screenshot salvo em jsonplaceholder_playwright.png.
+2025-06-30 09:41:39,350 - root - INFO - Fechando navegador Playwright
+2025-06-30 09:41:39,425 - root - INFO - Inicializando Playwright e abrindo nova página (Chromium)
+2025-06-30 09:41:40,263 - app.web_automation - INFO - Playwright: Acessando https://jsonplaceholder.typicode.com/ para verificar presença do elemento com seletor 'a[href='/guide'].mr-4'
+2025-06-30 09:41:41,310 - app.web_automation - INFO - Playwright: Elemento com seletor 'a[href='/guide'].mr-4' encontrado (1 elemento(s)).
+2025-06-30 09:41:41,311 - root - INFO - Fechando navegador Playwright
+2025-06-30 09:41:41,392 - root - INFO - Inicializando WebDriver do Selenium (Chrome)
+2025-06-30 09:41:42,074 - app.web_automation - INFO - Selenium: Acessando https://www.lambdatest.com/selenium-playground/simple-form-demo para preencher formulário.
+2025-06-30 09:41:45,864 - app.web_automation - INFO - Selenium: Mensagem 'Olá Mundo Selenium!' inserida no campo.
+2025-06-30 09:41:45,956 - app.web_automation - INFO - Selenium: Botão 'Get Checked Value' clicado.
+2025-06-30 09:41:45,978 - app.web_automation - INFO - Selenium: Mensagem de saída encontrada: 'Olá Mundo Selenium!'
+2025-06-30 09:41:45,979 - root - INFO - Fechando WebDriver do Selenium
+2025-06-30 09:41:46,040 - root - INFO - Inicializando Playwright e abrindo nova página (Chromium)
+2025-06-30 09:41:46,870 - app.web_automation - INFO - Playwright: Acessando https://jsonplaceholder.typicode.com/ para navegação, interação e coleta de performance.
+2025-06-30 09:41:48,587 - app.web_automation - WARNING - Playwright: Link 'a[href='/guide/']' não encontrado na página inicial.
+2025-06-30 09:41:48,593 - app.web_automation - INFO - Playwright: Métricas de performance (window.performance.timing): {"connectStart":1751287306881,"secureConnectionStart":1751287306943,"unloadEventEnd":0,"domainLookupStart":1751287306874,"domainLookupEnd":1751287306881,"responseStart":1751287307152,"connectEnd":1751287307067,"responseEnd":1751287307155,"requestStart":1751287307067,"domLoading":1751287307158,"redirectStart":0,"loadEventEnd":1751287307820,"domComplete":1751287307820,"navigationStart":1751287306873,"loadEventStart":1751287307820,"domContentLoadedEventEnd":1751287307632,"unloadEventStart":0,"redirectEnd":0,"domInteractive":1751287307525,"fetchStart":1751287306873,"domContentLoadedEventStart":1751287307617}
+2025-06-30 09:41:48,594 - root - INFO - Fechando navegador Playwright
