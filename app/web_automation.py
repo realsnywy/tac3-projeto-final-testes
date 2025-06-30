@@ -68,10 +68,16 @@ def playwright_verify_element_presence(page: Page, url, selector):
     element = page.query_selector(selector)
     present = element is not None
     if present:
-        expect(page.locator(selector)).to_be_visible()
-        logger.info(
-            f"Playwright: Elemento com seletor '{selector}' encontrado e visível."
-        )
+        element_count = page.locator(selector).count()
+        if element_count > 0:
+            logger.info(
+                f"Playwright: Elemento com seletor '{selector}' encontrado ({element_count} elemento(s))."
+            )
+        else:
+            present = False
+            logger.warning(
+                f"Playwright: Elemento com seletor '{selector}' NÃO encontrado."
+            )
     else:
         logger.warning(f"Playwright: Elemento com seletor '{selector}' NÃO encontrado.")
     return present
@@ -129,8 +135,5 @@ def playwright_navigate_interact_and_log_performance(
     logger.info(
         f"Playwright: Métricas de performance (window.performance.timing): {performance_metrics}"
     )
-
-    metrics = page.metrics()
-    logger.info(f"Playwright: Métricas da página (page.metrics()): {metrics}")
 
     return True

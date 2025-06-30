@@ -5,6 +5,7 @@ from robot.api.deco import keyword
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from robot.libraries.BuiltIn import BuiltIn
 
 logger = logging.getLogger(__name__)
 if not logger.handlers:
@@ -20,6 +21,13 @@ BASE_API_URL = "https://jsonplaceholder.typicode.com"
 FORM_TEST_URL_LAMBDATEST = (
     "https://www.lambdatest.com/selenium-playground/simple-form-demo"
 )
+
+
+@keyword("Get WebDriver Instance")
+def get_webdriver_instance():
+    """Obtém a instância atual do WebDriver do SeleniumLibrary."""
+    selenium_lib = BuiltIn().get_library_instance("SeleniumLibrary")
+    return selenium_lib.driver
 
 
 @keyword("Verificar Status da Resposta da API")
